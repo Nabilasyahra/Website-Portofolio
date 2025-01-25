@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Nabila Syahra</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f4f7fb;
+      color: #334e6a;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px 50px;
+      background: linear-gradient(to bottom, rgba(195, 208, 221, 0.9), #d1e9ff);
+      backdrop-filter: blur(15px);
+      border-radius: 0 0 20px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      color: #334e6a;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar {
+      display: flex;
+      gap: 5px;
+    }
+
+    .navbar a {
+      font-size: 1rem;
+      color: #334e6a;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 5px 15px;
+      border-radius: 20px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+      color: #272734;
+    }
+
+    .header-decor {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      width: 100%;
+      height: 15px;
+      background: linear-gradient(to right, #1b4965, #d1e9ff, #1b4965);
+      border-radius: 50px;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      z-index: 999;
+    }
+
+    .projects {
+      margin-top: 80px;
+      padding: 40px;
+      color: #334e6a;
+    }
+
+    .projects h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      text-align: center;
+      color: #1b4965;
+    }
+
+    .project-card-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px; /* Jarak antar card */
+    }
+
+    .project-card {
+      width: 30%;
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .project-card iframe {
+      margin: 10px auto; /* Menambahkan margin untuk jarak antar video */
+      display: block; /* Pastikan iframe tampil sebagai block element */
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card img,
+    .project-card video {
+      width: 90%;
+      height: 180px;
+      object-fit: cover;
+      margin: 20px auto 0;
+      border-radius: 10px 10px 0 0;
+    }
+
+    .project-card img:hover,
+    .project-card video:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .project-card-content {
+      padding: 15px;
+      background-color: #f9f9f9;
+      border-radius: 0 0 15px 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project-card h3 {
+      font-size: 1.4rem;
+      color: #1b4965;
+      margin-bottom: 10px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .project-card h3::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background-color: #1b4965;
+    }
+
+    .project-card p {
+      font-size: 0.9rem;
+      color: #1b4965;
+      line-height: 1.5;
+      text-align: center;
+      max-width: 80%;
+      margin: 0 auto;
+    }
+
+    footer {
+      position: relative;
+      background: linear-gradient(to top, #d1e9ff, #ffffff);
+      height: 30px;
+      overflow: hidden;
+    }
+
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50px;
+      background: url('https://svgshare.com/i/kcT.svg') repeat-x;
+      animation: wave-animation 6s linear infinite;
+    }
+
+    @keyframes wave-animation {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>My Portfolio</h1>
+    <nav class="navbar">
+      <a href="index.html">Home</a>
+      <a href="skils.html">Skils</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="header-decor"></div>
+
+  <section class="projects">
+    <h2>Training</h2>
+
+    <div class="project-card-container">
+      <!-- Project 1 Card -->
+      <div class="project-card">
+        <img src="sertifikat.jpg" alt="UI/UX Design">
+        <div class="project-card-content">
+          <h3>UI/UX DESIGN</h3>
+          <p>Pelatihan nasional Auto-Layout dalam figma untuk membangun UI/UX Design yang fleksibel dan responsif.</p>
+        </div>
+      </div>
+
+      <!-- Project 2 Card -->
+      <div class="project-card">
+        <img src="ojk.jpg" alt="Ojk Digination makassar 2024">
+        <div class="project-card-content">
+          <h3>Ojk Digination makassar 2024</h3>
+          <p>Kegiatan seminar Digital Financial Innovation dengan pengenalan Inovasi  Teknologi Di Sektor Keuangan, Aset Keuangan Digital Dan Aset Kripto.</p>
+        </div>
+      </div>
+
+      <!-- Project 3 Card -->
+      <div class="project-card">
+        <img src="PR.jpg" alt="Data Analysis">
+        <div class="project-card-content">
+          <h3>Seminar</h3>
+          <p>Mengikuti seminar pelatihan Teknik infomatika untuk menunjang keilmuan Teknik informatika.</p>
+        </div>
+      </div>
+
+      <!-- Video Project Card 1 -->
+      <div class="project-card" style="width: 48%;">
+        <iframe width="100%" height="180" src="https://www.youtube.com/embed/glM4ACaXr3c" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="project-card-content">
+          <h3>Video Tutorial perakitan Cpu</h3>
+        </div>
+      </div>
+
+      <!-- Video Project Card 2 -->
+      <div class="project-card" style="width: 48%;">
+        <iframe width="100%" height="180" src="https://www.youtube.com/embed/hw5X8MEC2B4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="project-card-content">
+          <h3>Booting & Instalasi windows</h3>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="wave"></div>
+  </footer>
+</body>
+
+</html>
